@@ -16,9 +16,8 @@ import java.util.Random;
  */
 public class TridentSpout extends BaseRichSpout {
     SpoutOutputCollector spoutOutputCollector = null;
-    OutputFieldsDeclarer outputFieldsDeclarer = null;
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
-        this.outputFieldsDeclarer.declare(new Fields("strName"));
+        outputFieldsDeclarer.declare(new Fields("strName"));
     }
 
     public void open(Map map, TopologyContext topologyContext, SpoutOutputCollector spoutOutputCollector) {
